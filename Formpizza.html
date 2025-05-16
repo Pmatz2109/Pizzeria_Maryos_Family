@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de pedido</title>
+    <link rel="stylesheet" href="button.css"> <!-- Estilos de los botones  -->
+    <link rel="stylesheet" href="Form.css"><!-- Estilos del formulario  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- Libreria para generar el comprobante en formato pdf-->
+</head>
+<!-- Sección de formulario de pedido -->
+
+<body>
+    <form method="post" id="formulario" action="https://formsubmit.co/pizzasmariosfamily@gmail.com"> <!-- Apartado para mandar a gmail -->
+        <u style="color: aliceblue;">
+            <h1 style="font-size: 50px;">Pedido de Pizza</h1>
+        </u>
+        <div class="form-group">
+            <h2>Pizza:</h2>
+            <label>
+                <p><input type="radio" name="Sabor" id="sabor" value="Pizza Cuatro Quesos" /><span
+                        class="custom-radio"></span>
+                    Pizza Cuatro Quesos
+            </label></p>
+            <p>
+                <label><input type="radio" name="Sabor" id="sabor" value="Pizza de Pepperoni" /> <span
+                        class="custom-radio"></span>Pizza de Pepperoni</label>
+            </p>
+            <p>
+                <label> <input type="radio" name="Sabor" id="sabor" value="Pizza Hawaina" /><span
+                        class="custom-radio"></span>
+                    Pizza Hawaiana</label>
+            </p>
+            <p>
+                <label><input type="radio" name="Sabor" id="sabor" value="Pizza Carnivora" /><span
+                        class="custom-radio"></span>
+                    Pizza Carnivora</label>
+            </p>
+            <p>
+                <label><input type="radio" name="Sabor" id="sabor" value="Pizza Criolla" /> <span
+                        class="custom-radio"></span>Pizza Criolla</label>
+            </p>
+            <p>
+                <label> <input type="radio" name="Sabor" id="sabor" value="Pizza Jamón" /><span
+                        class="custom-radio"></span>
+                    Pizza Jamón</label>
+            </p>
+            <p>
+                <label> <input type="radio" name="Sabor" id="sabor" value="Pizza Vegetariana" /> <span
+                        class="custom-radio"></span>Pizza Vegetariana</label>
+            </p>
+        </div>
+        <div class="form-group">
+            <h2>Tamaño:</h2>
+            <p> <label><input type="radio" name="tamano" id="tamano" value="Porción Individual" data-price="9" /><span
+                        class="custom-radio"> </span> Porción Individual</label></p>
+            <p>
+                <label> <input type="radio" name="tamano" id="tamano" value="Personal" data-price="35" /><span
+                        class="custom-radio"> </span> Personal</label>
+            </p>
+            <p>
+                <label> <input type="radio" name="tamano" id="tamano" value=" Mediana" data-price="85" /><span
+                        class="custom-radio"> </span> Mediana</label>
+            </p>
+            <p>
+                <label> <input type="radio" name="tamano" id="tamano" value="Familiar" data-price="129" /> <span
+                        class="custom-radio"> </span>Familiar</label>
+            </p>
+            <p>
+                <label><input type="radio" name="tamano" id="tamano" value="Super" data-price="150" /> <span
+                        class="custom-radio"> </span>Super</label>
+            </p>
+        </div>
+        <div class="form-group">
+            <h2>Refrescos:</h2>
+            <p>
+                <label> <input type="radio" name="fresco" id="fresco" value="Fanta" /><span class="custom-radio"></span>
+                    Fanta</label>
+            </p>
+            <p>
+                <label> <input type="radio" name="fresco" id="fresco" value="Coca Cola" /><span
+                        class="custom-radio"></span>
+                    Coca Cola</label>
+            </p>
+            <p>
+                <label> <input type="radio" name="fresco" id="fresco" value=" Sprite" /><span
+                        class="custom-radio"></span>
+                    Sprite</label>
+            </p>
+            <p>
+                <label><input type="radio" name="fresco" id="fresco" value="Pepsi" /> <span
+                        class="custom-radio"></span>Pepsi</label>
+            </p>
+            <p>
+                <label><input type="radio" name="fresco" id="fresco" value="7Up" /><span class="custom-radio"></span>
+                    7Up</label>
+            </p>
+        </div>
+        <div class="form-group">
+            <h2>Tamaño Refresco:</h2>
+            <p>
+                <label><input type="radio" name="tfresco" id="tfresco" value="500 ml" data-price="5" /><span
+                        class="custom-radio"></span> 500 ml</label>
+            </p>
+            <p>
+                <label><input type="radio" name="tfresco" id="tfresco" value="1 L" data-price="7" /><span
+                        class="custom-radio"></span>1L</label>
+            </p>
+            <p>
+                <label> <input type="radio" name="tfresco" id="tfresco" value="2L" data-price="9" /> <span
+                        class="custom-radio"></span>2L</label>
+            </p>
+            <p>
+                <label><input type="radio" name="tfresco" id="tfresco" value="2.5 L" data-price="11" /> <span
+                        class="custom-radio"></span>2.5 L</label>
+            </p>
+            <p>
+                <label><input type="radio" name="tfresco" id="tfresco" value="3L" data-price="13" /><span
+                        class="custom-radio"></span> 3L</label>
+            </p>
+        </div>
+        <div class="form-group">
+            <h2>Extras:</h2>
+            <p>
+                <label><input type="radio" name="extra" id="extra" value="Queso Extra" data-price="20" /> <span
+                        class="custom-radio"></span>Queso Extra</label>
+            </p>
+            <p>
+                <label> <input type="radio" name="extra" id="extra" value="Tocino Extra" data-price="12" /> <span
+                        class="custom-radio"></span>Tocino Extra</label>
+            </p>
+            <p>
+                <label> <input type="radio" name="extra" id="extra" value="Orilla de Queso" data-price="10" /><span
+                        class="custom-radio"></span> Orilla de Queso</label>
+            </p>
+        </div>
+        <div class="form-group">
+            <h2>Promoción:</h2>
+            <p>
+                <label><input type="radio" name="promo" id="promo" value="Noche de Fútbol" data-discount="20" /> <span
+                        class="custom-radio"></span>Noche de Fútbol</label>
+            </p>
+            <p>
+                <label> <input type="radio" name="promo" id="promo" value="Armada" data-discount="20" /><span
+                        class="custom-radio"></span> Armada</label>
+            </p>
+            <p>
+                <label><input type="radio" name="promo" id="promo" value="Combo Familiar" data-discount="20" /><span
+                        class="custom-radio"></span> Combo Familiar</label>
+            </p>
+            <p>
+                <label><input type="radio" name="promo" id="promo" value="2x1" data-discount="50" /><span
+                        class="custom-radio"></span> 2x1</label>
+            </p>
+        </div>
+        <h2>Datos de Entrega:</h2>
+        <div class="form-group">
+            <h2><label for="nombre" style="font-weight: bold;">Nombre:</label></h2>
+            <input type="text" id="nombre" required maxlength="50" pattern="[A-Za-z/s]+">
+        </div>
+        <div class="form-group">
+            <h2><label for="direccion">Dirección:</label></h2>
+            <input type="text" id="direccion" name="direccion" maxlength="100" required>
+            <center>
+                <a type="button" onclick="getLocation()" id="specialButton"
+                    style="border-radius: 40px; margin-top: 22px">
+                    <i></i>
+                    <i></i>
+                    <span>Ingresar Ubicacion</span>
+                </a>
+                <script>
+                    let btn = document.querySelector('#specialButton');
+                    btn.addEventListener('mousemove', e => {
+                        let rect = e.target.getBoundingClientRect();
+                        let x = e.clientX * 3 - rect.left;
+                        btn.style.setProperty('--x', x + 'deg')
+                    });
+                </script>
+            </center>
+        </div>
+        <div class="form-group">
+            <h2><label style="font-weight: bold;" for="telefono">Teléfono:</label></h2>
+            <input type="text" id="telefono" name="telefono" maxlength="50" required pattern="[0-9]+">
+        </div>
+        <div class="form-group">
+            <h2><label for="descripcion">Instrucciones espesciales:</label></h2>
+            <textarea id="descripcion" name="descripcion" rows="6" cols="60"
+                placeholder="Sin cebolla, extra queso, etc."
+                style="font-size: 30px; border-radius: 25px; padding: 9px;margin: auto;margin-top: 12px;border-radius: 20px;background-color: black; color: white;"></textarea>
+        </div>
+        <div class="form-group">
+            <p name="precio" id="precio" style="font-size: 30px; font-weight: bold;"></p>
+            <input type="hidden" name="precio_total_submitted" id="hiddenPrecioTotal" value="0.00">
+        </div>
+        <div class="form-group">
+            <h2>Método de Pago:</h2>
+            <div style="margin: 20px; font-size: 25px;">
+                <label style="margin-right: 20px;color: #f7f3f3; font-weight: bold; font-size: 42px;">
+                    <input type="radio" name="metodo" id="metodo" value="qr" checked><span class="custom-radio"></span>
+                    QR
+                </label>
+                <label style="color: #f7f3f3; font-weight: bold; font-size: 42px;">
+                    <input type="radio" name="metodo" id="metodo" value="efectivo"><span class="custom-radio"></span>
+                    Efectivo
+                </label>
+            </div>
+            <div id="qrImage" style="margin: 20px;">
+                <img src="Images/qr.png" height="200px" width="200px"
+                    style="border: 5px solid #c1b61fe8; border-radius: 20px;">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <center>
+                <a><button type="button" onclick="generarPDFyEnviar()" id="specialButton1"
+                        style="border-radius: 40px; margin-top: 22px; font-size: 20px; padding: 10px 30px; cursor: pointer;">
+                        <i></i>
+                        <i></i>
+                        <span>Enviar Pedido y Generar PDF</span>
+                    </button>
+                </a>
+                <script>
+                    let btn1 = document.querySelector('#specialButton1');
+                    btn1.addEventListener('mousemove', e => {
+                        let rect = e.target.getBoundingClientRect();
+                        let x = e.clientX * 3 - rect.left;
+                        btn1.style.setProperty('--x', x + 'deg');
+                    });
+                </script>
+            </center>
+        </div>
+    </form>
+    <div id="comprobante" style="display: none;"></div>
+    <script>
+    // Obtiene el elemento del formulario por su ID.
+    const formulario = document.getElementById('formulario');
+    // Obtiene el elemento div donde se mostrará el comprobante por su ID.
+    const comprobanteDiv = document.getElementById('comprobante');
+
+    // Define una función llamada generarPDF que se encargará de crear el comprobante y generar el PDF.
+    function generarPDF() {
+        // Obtiene el valor del botón de radio seleccionado para el sabor de la pizza. Si no hay ninguno seleccionado, asigna 'No seleccionado'.
+        const Sabor = document.querySelector('input[name="Sabor"]:checked')?.value || 'No seleccionado';
+        // Obtiene el valor del botón de radio seleccionado para el tamaño de la pizza. Si no hay ninguno seleccionado, asigna 'No seleccionado'.
+        const tamano = document.querySelector('input[name="tamano"]:checked')?.value || 'No seleccionado';
+        // Obtiene el valor del botón de radio seleccionado para si desea refresco. Si no hay ninguno seleccionado, asigna 'No seleccionado'.
+        const fresco = document.querySelector('input[name="fresco"]:checked')?.value || 'No seleccionado';
+        // Obtiene el valor del botón de radio seleccionado para el tamaño del refresco. Si no hay ninguno seleccionado, asigna 'No seleccionado'.
+        const tfresco = document.querySelector('input[name="tfresco"]:checked')?.value || 'No seleccionado';
+        // Obtiene el valor del botón de radio seleccionado para los extras. Si no hay ninguno seleccionado, asigna 'No seleccionado'.
+        const extra = document.querySelector('input[name="extra"]:checked')?.value || 'No seleccionado';
+        // Obtiene el valor del botón de radio seleccionado para la promoción. Si no hay ninguno seleccionado, asigna 'No seleccionado'.
+        const promo = document.querySelector('input[name="promo"]:checked')?.value || 'No seleccionado';
+        // Obtiene el valor del campo de texto para el nombre del cliente.
+        const nombre = document.getElementById('nombre').value;
+        // Obtiene el valor del campo de texto para la dirección del cliente.
+        const direccion = document.getElementById('direccion').value;
+        // Obtiene el valor del área de texto para la descripción o instrucciones especiales.
+        const descripcion = document.getElementById('descripcion').value;
+        // Obtiene el valor del elemento con el ID 'precio' (que muestra el precio total) o asigna 'Ninguno' si está vacío.
+        const precio = document.getElementById('precio').value || 'Ninguno';
+        // Crea una plantilla de HTML para el comprobante del pedido, utilizando los valores obtenidos.
+        const comprobanteHTML = `
+            <h3>Comprobante de Pedido</h3>
+            <p><strong>Sabor:</strong> ${Sabor}</p>
+            <p><strong>Tamaño:</strong> ${tamano}</p>
+            <p><strong>Refresco:</strong> ${fresco}</p>
+            <p><strong>Tamaño refresco:</strong> ${tfresco}</p>
+            <p><strong>Extras:</strong> ${extra}</p>
+            <p><strong>Promocion:</strong> ${promo}</p>
+            <p><strong>Nombre:</strong> ${nombre}</p>
+            <p><strong>Dirección:</strong> ${direccion}</p>
+            <p><strong>Instrucciones especiales:</strong> ${descripcion}</p>
+            <p><strong>Precio:</strong> ${precio}</p>
+        `;
+        // Inserta el HTML del comprobante dentro del elemento div 'comprobanteDiv'.
+        comprobanteDiv.innerHTML = comprobanteHTML;
+        // Muestra el elemento div del comprobante al establecer su propiedad 'display' en 'block'.
+        comprobanteDiv.style.display = 'block';
+        // Oculta el formulario al establecer su propiedad 'display' en 'none'.
+        formulario.style.display = 'none'; // Ocultar el formulario
+
+        // Utiliza la librería html2pdf para convertir el contenido de 'comprobanteDiv' a un archivo PDF.
+        html2pdf().from(comprobanteDiv).set({
+            // Define los márgenes del documento PDF en milímetros.
+            margin: 10,
+            // Define el nombre del archivo PDF que se descargará.
+            filename: 'Comprobante_Pizza.pdf',
+            // Opciones para html2canvas, que convierte el HTML en una imagen (aumenta la escala para mejor resolución).
+            html2canvas: { scale: 2 },
+            // Opciones para jsPDF, que genera el documento PDF.
+            jsPDF: {
+                // Define la unidad de medida para las dimensiones del PDF como milímetros.
+                unit: 'mm',
+                // Define el formato de la página del PDF como un array [ancho, alto].
+                format: [300, 400],
+                // Define la orientación de la página del PDF como vertical ('portrait').
+                orientation: 'portrait'
+            }
+
+        }).save().then(() => {
+            // Después de guardar el PDF, restaura el formulario a su estado inicial.
+            formulario.reset();
+            // Oculta el formulario de nuevo.
+            formulario.style.display = 'none'; // Mostrar el formulario de nuevo
+            // Muestra el div del comprobante.
+            comprobanteDiv.style.display = 'block'; // Ocultar el comprobante
+        });
+    }
+</script>
+<script>
+    // Define una función llamada generarPDFyEnviar que primero genera el PDF y luego pregunta si se debe enviar el pedido.
+    function generarPDFyEnviar() {
+        // Llama a la función generarPDF para crear el comprobante en formato PDF.
+        generarPDF();
+
+        // Utiliza setTimeout para esperar 1 segundo (1000 milisegundos) después de generar el PDF.
+        setTimeout(() => {
+            // Muestra un cuadro de diálogo de confirmación preguntando al usuario si desea enviar el pedido.
+            const confirmar = confirm("¿Deseas enviar el pedido?");
+            // Si el usuario hace clic en "Aceptar" en el cuadro de diálogo de confirmación.
+            if (confirmar) {
+                // Envía el formulario identificado por el ID "formulario". Asegúrate de que el elemento <form> en tu HTML tenga este ID.
+                document.getElementById("formulario").submit();
+            }
+        }, 1000); // espera 1 segundo para dar tiempo a la descarga del PDF
+    }
+</script>
+
+<script>
+    // Selecciona todos los elementos input de tipo radio con el atributo 'name' igual a 'metodo'.
+    document.querySelectorAll('input[name="metodo"]').forEach(input => {
+        // Agrega un event listener a cada botón de radio para el evento 'change' (cuando el estado del botón cambia).
+        input.addEventListener('change', function () {
+            // Obtiene el elemento de la imagen QR por su ID.
+            const qrImage = document.getElementById('qrImage');
+            // Si el valor del botón de radio seleccionado es igual a 'qr'.
+            if (this.value === 'qr') {
+                // Muestra la imagen QR estableciendo su propiedad 'display' en 'block'.
+                qrImage.style.display = 'block';
+            } else {
+                // Oculta la imagen QR estableciendo su propiedad 'display' en 'none'.
+                qrImage.style.display = 'none';
+            }
+        });
+    });
+</script>
+<script>
+    // Define una función para calcular el precio total del pedido.
+    function calcularPrecioTotal() {
+        // Inicializa la variable total en 0.
+        let total = 0;
+        // Calcular precio de la pizza
+        // Selecciona el botón de radio seleccionado para el tamaño de la pizza.
+        const tamañoPizza = document.querySelector('input[name="tamano"]:checked');
+        // Si se ha seleccionado un tamaño de pizza, agrega su precio (almacenado en el atributo 'data-price') al total.
+        if (tamañoPizza) total += parseFloat(tamañoPizza.dataset.price);
+        // Calcular precio del refresco
+        // Selecciona el botón de radio seleccionado para el tamaño del refresco.
+        const tamañoRefresco = document.querySelector('input[name="tfresco"]:checked');
+        // Si se ha seleccionado un tamaño de refresco, agrega su precio (almacenado en el atributo 'data-price') al total.
+        if (tamañoRefresco) total += parseFloat(tamañoRefresco.dataset.price);
+        // Calcular precio de los extras
+        // Selecciona el botón de radio seleccionado para los extras.
+        const extra = document.querySelector('input[name="extra"]:checked');
+        // Si se ha seleccionado un extra, agrega su precio (almacenado en el atributo 'data-price') al total.
+        if (extra) total += parseFloat(extra.dataset.price);
+        // Aplicar descuento de la promoción
+        // Selecciona el botón de radio seleccionado para la promoción.
+        const promo = document.querySelector('input[name="promo"]:checked');
+        // Si se ha seleccionado una promoción.
+        if (promo) {
+            // Obtiene el valor del descuento (almacenado en el atributo 'data-discount') y lo divide por 100 para obtener el porcentaje.
+            const descuento = parseFloat(promo.dataset.discount) / 100;
+            // Resta el descuento del precio total.
+            total -= total * descuento;
+        }
+
+        // Retorna el precio total formateado a dos decimales.
+        return total.toFixed(2);
+    }
+
+    // Define una función para actualizar el texto que muestra el precio total en la página.
+    function actualizarPrecioTotal() {
+        // Llama a la función calcularPrecioTotal para obtener el precio actual.
+        const precioTotal = calcularPrecioTotal();
+        // Actualiza el contenido de texto del elemento con el ID 'precio' para mostrar el precio total.
+        document.getElementById('precio').textContent = `Precio Total: Bs${precioTotal}`;
+        // AÑADE ESTA LÍNEA PARA ACTUALIZAR EL CAMPO OCULTO
+        // Actualiza el valor del campo oculto con el ID 'hiddenPrecioTotal' con el precio total calculado. Esto puede ser útil para enviar el precio con el formulario.
+        document.getElementById('hiddenPrecioTotal').value = precioTotal;
+    }
+    // Agregar event listeners a todos los inputs relevantes
+    // Selecciona todos los elementos input de tipo radio en el documento.
+    document.querySelectorAll('input[type="radio"]').forEach(input => {
+        // Agrega un event listener a cada botón de radio para el evento 'change', de modo que cuando se selecciona una opción, se actualice el precio total.
+        input.addEventListener('change', actualizarPrecioTotal);
+    });
+    // Calcular precio inicial
+    // Llama a la función actualizarPrecioTotal al cargar la página para mostrar el precio inicial (que será 0 si no hay opciones seleccionadas).
+    actualizarPrecioTotal();
+</script>
+<script>
+    // Define una función para obtener la ubicación del usuario utilizando la API de geolocalización del navegador.
+    function getLocation() {
+        // Verifica si el navegador soporta la geolocalización.
+        if (navigator.geolocation) {
+            // Llama al método getCurrentPosition para obtener la ubicación actual del usuario.
+            // El primer argumento es una función de callback que se ejecuta si la ubicación se obtiene con éxito (showPosition).
+            // El segundo argumento es una función de callback que se ejecuta si ocurre un error (showError).
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            // Si la geolocalización no es soportada por el navegador, muestra una alerta.
+            alert("La geolocalización no es soportada por este navegador.");
+        }
+    }
+
+    // Define una función que recibe un objeto de posición (position) con las coordenadas de latitud y longitud.
+    function showPosition(position) {
+        // Obtiene la latitud de las coordenadas.
+        var lat = position.coords.latitude;
+        // Obtiene la longitud de las coordenadas.
+        var lon = position.coords.longitude;
+
+        // Usar la API de Geocodificación inversa de OpenStreetMap para obtener la dirección
+        // Realiza una petición fetch a la API de geocodificación inversa de OpenStreetMap.
+        // El formato de la respuesta se solicita como JSON, y se incluyen la latitud y longitud.
+        fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`)
+            // Cuando la promesa (la respuesta del servidor) se resuelve, la convierte a formato JSON.
+            .then(response => response.json())
+            // Cuando el JSON es procesado (data), extrae el nombre de la visualización de la dirección.
+            .then(data => {
+                // Obtiene la dirección formateada del objeto de datos.
+                var address = data.display_name;
+                // Establece el valor del campo de texto con el ID "direccion" con la dirección obtenida.
+                document.getElementById("direccion").value = address;
+            })
+            // Si ocurre algún error durante la petición fetch o el procesamiento de la respuesta.
+            .catch(error => {
+                // Muestra un error en la consola del navegador.
+                console.error('Error:', error);
+                // Muestra una alerta al usuario indicando que no se pudo obtener la dirección.
+                alert("No se pudo obtener la dirección.");
+            });
+    }
+
+    // Define una función que recibe un objeto de error (error) si la obtención de la ubicación falla.
+    function showError(error) {
+        // Utiliza una estructura switch para manejar diferentes tipos de errores de geolocalización.
+        switch (error.code) {
+            // Si el usuario deniega el permiso para acceder a su ubicación.
+            case error.PERMISSION_DENIED:
+                alert("Usuario denegó la solicitud de Geolocalización.");
+                break;
+            // Si la información de la ubicación no está disponible.
+            case error.POSITION_UNAVAILABLE:
+                alert("La información de ubicación no está disponible.");
+                break;
+            // Si la solicitud para obtener la ubicación del usuario excede el tiempo de espera.
+            case error.TIMEOUT:
+                alert("La solicitud para obtener la ubicación del usuario expiró.");
+                break;
+            // Si ocurre un error desconocido.
+            case error.UNKNOWN_ERROR:
+                alert("Un error desconocido ocurrió.");
+                break;
+        }
+    }
+</script>
+</body>
+
+</html>

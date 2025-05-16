@@ -1,0 +1,133 @@
+* {
+    padding: 0;         /* Elimina el relleno predeterminado de todos los elementos */
+    margin: 0;          /* Elimina los márgenes predeterminados de todos los elementos */
+    box-sizing: border-box; /* Incluye el borde y el relleno en el ancho/alto total del elemento.  Esto ayuda a mantener un diseño consistente. */
+    text-decoration: none; /* Elimina la decoración de texto predeterminada, como el subrayado en los enlaces. */
+    list-style: none;    /* Elimina los estilos de lista predeterminados, como los puntos en las listas. */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Establece la fuente para el texto de la página. Usa Arial si está disponible, si no, usa Helvetica, y si no, una fuente sans-serif genérica. */
+}
+
+.container {
+    max-width: 1200px;  /* Establece un ancho máximo para el contenedor principal. Esto ayuda a que el contenido no se extienda demasiado en pantallas grandes. */
+    margin: 0 auto;     /* Centra el contenedor horizontalmente en la página. '0' para el margen superior e inferior, 'auto' para los márgenes izquierdo y derecho. */
+}
+
+.content {
+    min-height: 80px;   /* Establece una altura mínima para el área de contenido. Asegura que tenga al menos 80 píxeles de alto, incluso si el contenido es pequeño. */
+    background: linear-gradient(90deg, /* Aplica un gradiente lineal como fondo. '90deg' indica que el gradiente es horizontal. */
+            rgb(177, 145, 2) 0%,   /* 'rgb(177, 145, 2)' es el color de inicio del gradiente (un tono de amarillo/dorado), y '0%' indica que comienza al principio. */
+            rgb(14, 13, 11) 70%);  /* 'rgb(14, 13, 11)' es el color de fin del gradiente (un tono de gris oscuro/negro), y '70%' indica que este color comienza al 70% del ancho. */
+}
+
+.menu {
+    position: absolute; /* Posiciona el menú de forma absoluta, lo que significa que se posiciona en relación con el primer ancestro posicionado (si no hay ninguno, se posiciona en relación con el body). */
+    top: 10px;          /* Lo posiciona a 10 píxeles desde la parte superior de su contenedor padre. */
+    left: 0;           /* Lo alinea con el borde izquierdo de su contenedor padre. */
+    right: 0;          /* Lo alinea con el borde derecho de su contenedor padre. Esto, junto con 'left: 0', hace que se extienda horizontalmente. */
+    display: flex;      /* Utiliza Flexbox para el diseño. Flexbox es un modelo de diseño que facilita la alineación y distribución de elementos. */
+    align-items: center; /* Centra los elementos verticalmente dentro del contenedor flex. */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente con el mismo espacio entre ellos. */
+    flex-wrap: wrap;     /* Permite que los elementos se envuelvan a la siguiente línea si no hay suficiente espacio para mostrarlos en una sola línea.  Útil para el diseño responsive. */
+}
+
+.logo {
+    font-size: 36px;    /* Establece el tamaño de la fuente para el logo. */
+    color: #ffffff;     /* Establece el color del texto del logo en blanco. */
+    font-weight: bold;  /* Establece el grosor de la fuente en negrita. */
+    text-decoration: none; /* Elimina el subrayado del enlace del logo. */
+    flex-grow: 1;       /* Permite que el logo se expanda para ocupar espacio adicional.  En este caso, ayuda a empujar los elementos de navegación hacia la derecha. */
+    text-align: center; /* Centra el texto del logo horizontalmente. */
+    margin-left: 20px;   /* Añade un margen a la izquierda del logo. */
+}
+
+.menu .navbar ul {
+    display: flex;     /* Utiliza Flexbox para el diseño de la lista de navegación. */
+    gap: 20px;          /* Añade un espacio (gap) de 20 píxeles entre los elementos de la lista (los elementos 'li'). */
+    list-style: none;   /* Elimina los estilos de lista predeterminados (los puntos). */
+    padding: 0;         /* Elimina el relleno interno de la lista. */
+    margin: 0;          /* Elimina los márgenes de la lista. */
+}
+
+.menu .navbar ul li {
+    position: relative; /* Establece la posición relativa para los elementos de la lista. Esto es importante si quieres posicionar elementos dentro de ellos. */
+    float: left;        /* Hace que los elementos de la lista floten a la izquierda.  Aunque `float` se usa menos en diseños Flexbox/Grid modernos, aquí ayuda a organizar la lista. */
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;    /* Establece el tamaño de la fuente para los enlaces de navegación. */
+    padding: 8px 12px;  /* Añade relleno interno a los enlaces (8 píxeles arriba y abajo, 12 píxeles a la izquierda y derecha). */
+    color: #dedede;     /* Establece el color del texto de los enlaces en un gris claro. */
+    display: block;      /* Hace que los enlaces se comporten como elementos de bloque.  Esto es importante porque permite que el relleno y los márgenes afecten a todo el área del enlace. */
+    font-weight: bold;  /* Establece el grosor de la fuente en negrita. */
+}
+
+.menu .navbar ul li a:hover {
+    color: #ffffffff; /* Cambia el color del texto del enlace a blanco cuando el usuario pasa el ratón por encima. */
+    border-radius: 5px; /* Añade un borde redondeado cuando el usuario pasa el ratón por encima. */
+}
+
+#menu {
+    display: none;       /* Oculta el checkbox con el ID "menu". Este checkbox se utiliza a menudo para la navegación en dispositivos móviles (menú hamburguesa). */
+}
+
+.menu-icono {
+    width: 25px;        /* Establece el ancho del icono del menú (probablemente el icono de "hamburguesa"). */
+}
+
+.mascota {
+    width: 70px;        /* Establece el ancho de la imagen de la mascota. */
+    height: auto;       /* Permite que la altura de la imagen se ajuste automáticamente para mantener la proporción. */
+    margin-right: 15px;  /* Añade un margen a la derecha de la imagen de la mascota. */
+}
+
+.menu label {
+    cursor: pointer;    /* Cambia el cursor a una mano cuando el usuario pasa el ratón por encima de la etiqueta.  Indica que es un elemento interactivo. */
+    display: none;       /* Oculta la etiqueta.  Se mostrará en dispositivos móviles usando media queries. */
+}
+
+h1 {
+    margin: 80px 0 0 350px; /* Añade un margen al encabezado h1 (80px arriba, 0 a la derecha, 0 abajo, 350px a la izquierda).  Esto lo desplaza. */
+}
+
+/* Media Query para dispositivos con un ancho máximo de 991 píxeles (dispositivos móviles y tabletas pequeñas) */
+@media (max-width: 991px) {
+    .content {
+        min-height: 70px; /* Reduce la altura mínima del área de contenido en dispositivos más pequeños. */
+    }
+
+    .menu {
+        top: 0;          /* Mueve el menú a la parte superior. */
+        padding: 20px;     /* Añade relleno dentro del menú. */
+    }
+
+    .menu label {
+        display: initial; /* Muestra la etiqueta del menú (el icono de hamburguesa) en dispositivos móviles. */
+    }
+
+    .menu .navbar {
+        position: fixed;  /* Fija la barra de navegación en la pantalla.  Permanece fija incluso cuando el usuario se desplaza. */
+        top: 75px;        /* La posiciona a 75 píxeles desde la parte superior de la ventana. */
+        left: 0;          /* La alinea con el borde izquierdo de la ventana. */
+        right: 0;         /* La alinea con el borde derecho de la ventana. */
+        background: linear-gradient( /* Aplica un gradiente lineal como fondo (similar al .content, pero con colores invertidos). */
+            90deg,
+            rgb(14, 13, 11) 0%,
+            rgb(14, 13, 11) 70%)
+        ;
+        z-index: 1000;    /* Establece el orden de apilamiento. Un valor más alto hace que el elemento se muestre delante de otros elementos. */
+        display: none;       /* Oculta la barra de navegación inicialmente. Se mostrará cuando se active el checkbox #menu. */
+        padding: 10px 0;   /* Añade relleno interno. */
+        width: 100%;       /* Ocupa todo el ancho disponible. */
+    }
+
+    .menu .navbar ul li {
+        width: 100%;       /* Hace que los elementos de la lista de navegación ocupen todo el ancho disponible dentro de la barra de navegación. */
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial; /* Muestra la barra de navegación cuando el checkbox #menu está marcado (es decir, cuando el usuario hace clic en el icono de hamburguesa).  El '~' es el selector de hermano general. */
+    }
+}

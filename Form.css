@@ -1,0 +1,134 @@
+* {
+   padding: 0;        /* Elimina el relleno predeterminado de todos los elementos */
+   margin: 0;         /* Elimina los márgenes predeterminados de todos los elementos */
+   font-family: century gothic; /* Establece la fuente para el texto */
+   text-align: center; /* Centra el texto horizontalmente */
+}
+
+body {
+   display: flex;      /* Utiliza Flexbox para el diseño */
+   justify-content: center; /* Centra el contenido horizontalmente */
+   align-items: center; /* Centra el contenido verticalmente */
+   min-height: 100vh;   /* Establece la altura mínima del body al 100% de la altura de la ventana */
+   background: url(Images/fonpizza.jpg) no-repeat; /* Establece una imagen de fondo */
+   background-size: cover; /* Escala la imagen para cubrir todo el body */
+   background-position: center; /* Centra la imagen de fondo */
+}
+
+form {
+   padding: 50px 200px; /* Añade relleno dentro del formulario */
+   background-color: rgb(173, 154, 148); /* Establece el color de fondo del formulario */
+   border: 2px solid rgb(240, 236, 236); /* Añade un borde al formulario */
+   color: #000000;      /* Establece el color del texto en negro */
+   font-weight: 40px;   /* Establece el grosor de la fuente (¡Ojo! Esto no es válido, font-weight usa valores como 'bold' o números 100-900) */
+   margin: calc(20% + 100px); /* Calcula el margen del formulario */
+   margin-top: 70px;    /* Añade margen en la parte superior */
+   padding-top: 28px;   /* Añade relleno en la parte superior */
+   border-style: dotted; /* Establece el estilo del borde como punteado */
+   border-radius: 50px; /* Redondea las esquinas del formulario */
+   margin-bottom: 30px; /* Añade margen en la parte inferior */
+}
+
+input {
+   padding: 9px;       /* Añade relleno dentro de los campos de entrada */
+   margin: auto;        /* Centra los campos de entrada horizontalmente */
+   margin-top: 12px;    /* Añade margen en la parte superior */
+   border-radius: 20px; /* Redondea las esquinas de los campos de entrada */
+   font-size: 50px;     /* Establece el tamaño de la fuente */
+   background-color: #000000; /* Establece el color de fondo de los campos de entrada */
+   color: #f7f3f3;      /* Establece el color del texto en blanco */
+}
+
+input[type='submit'] {
+   background-color: #e41212dc; /* Establece el color de fondo del botón de envío */
+   color: rgba(209, 205, 205); /* Establece el color del texto del botón de envío */
+   width: calc(80% - 20px);  /* Calcula el ancho del botón de envío */
+   margin: 0 10%;       /* Añade margen horizontal al botón de envío */
+   margin-top: 22px;    /* Añade margen en la parte superior */
+   border: none;        /* Elimina el borde del botón de envío */
+   border-style: dotted; /* Establece el estilo del borde como punteado */
+   border-radius: 40px; /* Redondea las esquinas del botón de envío */
+   outline: none;       /* Elimina el contorno del botón de envío al enfocarlo */
+}
+
+h1 {
+   color: #f7f6f6;      /* Establece el color del texto de los encabezados h1 en blanco */
+}
+
+h2 {
+   position: relative; /* Permite posicionar el encabezado relativamente a su posición normal */
+   right: 200px;       /* Desplaza el encabezado 200px a la izquierda */
+   font-size: 35px;     /* Establece el tamaño de la fuente */
+   color: #f7f6f6;      /* Establece el color del texto en blanco */
+}
+
+h3 {
+   position: relative; /* Permite posicionar el encabezado relativamente a su posición normal */
+   right: 200px;       /* Desplaza el encabezado 200px a la izquierda */
+   font-size: 35px;     /* Establece el tamaño de la fuente */
+   color: #f7f6f6;      /* Establece el color del texto en blanco */
+   align-items: center; /* Esto no tiene efecto en elementos de bloque como h3 */
+}
+
+p {
+   font-size: 30px;     /* Establece el tamaño de la fuente */
+   font-weight: bold;   /* Establece el grosor de la fuente en negrita */
+   color: #f7f6f6;      /* Establece el color del texto en blanco */
+}
+
+select option {
+   background-image: attr(data); /* Intenta establecer una imagen de fondo usando un atributo 'data' (¡Ojo! Esto puede no funcionar como se espera) */
+   background-size: 20px 20px; /* Establece el tamaño de la imagen de fondo */
+   background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+   padding-left: 40px;    /* Añade relleno a la izquierda del texto */
+}
+
+input[type="radio"] {
+   display: none;       /* Oculta los radio buttons originales */
+}
+
+.custom-radio {
+   width: 30px;        /* Establece el ancho del radio button personalizado */
+   height: 30px;       /* Establece la altura del radio button personalizado */
+   border: 2px solid #f7f3f3; /* Añade un borde */
+   border-radius: 50%; /* Lo convierte en un círculo */
+   display: inline-block; /* Permite colocarlo en línea con otros elementos */
+   position: relative; /* Permite posicionar el pseudo-elemento ::after dentro de él */
+   cursor: pointer;    /* Cambia el cursor al pasar por encima */
+}
+
+input[type="radio"]:checked + .custom-radio {
+   background-color: #e91710; /* Cambia el color de fondo cuando el radio button está seleccionado */
+   border-color: #f8f6f6;   /* Cambia el color del borde cuando el radio button está seleccionado */
+}
+
+.custom-radio::after {
+   content: '';       /* Inserta contenido vacío después del elemento .custom-radio */
+   position: absolute; /* Lo posiciona absolutamente dentro del .custom-radio */
+   left: 8px;        /* Lo posiciona a 8px desde la izquierda */
+   top: 8px;         /* Lo posiciona a 8px desde la parte superior */
+   width: 14px;       /* Establece el ancho */
+   height: 14px;      /* Establece la altura */
+   background-color: rgb(180, 151, 18); /* Establece el color de fondo */
+   border-radius: 50%; /* Lo convierte en un círculo */
+   display: none;       /* Lo oculta inicialmente */
+}
+
+input[type="radio"]:checked + .custom-radio::after {
+   display: block;      /* Lo muestra cuando el radio button está seleccionado */
+}
+
+#comprobante {
+   display: none;       /* Oculta el elemento con el ID "comprobante" inicialmente */
+   width: 100%;        /* Ocupa todo el ancho disponible */
+   max-width: 900px;    /* Establece un ancho máximo */
+   min-height: 800px;   /* Establece una altura mínima */
+   background: #6e280a; /* Establece el color de fondo */
+   border: 2px solid #dcbc0b; /* Añade un borde */
+   padding: 30px;       /* Añade relleno */
+   margin: 40px auto;   /* Centra el elemento horizontalmente y añade margen vertical */
+   border-radius: 12px; /* Redondea las esquinas */
+   font-size: 20px;     /* Establece el tamaño de la fuente */
+   line-height: 1.8;    /* Establece el espaciado entre líneas */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Añade una sombra */
+}

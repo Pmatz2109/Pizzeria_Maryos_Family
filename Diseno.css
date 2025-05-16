@@ -1,0 +1,24 @@
+.ok {
+    text-align: center; /* Centra el texto horizontalmente */
+    width: 100%;        /* Ocupa todo el ancho disponible */
+    padding: 12px;       /* Añade relleno alrededor del texto */
+    background-color: #1e6; /* Establece un fondo verde claro */
+    color: #fff;         /* Establece el color del texto en blanco */
+}
+
+.bad {
+    text-align: center; /* Centra el texto horizontalmente */
+    width: 100%;        /* Ocupa todo el ancho disponible */
+    padding: 12px;       /* Añade relleno alrededor del texto */
+    background-color: #a22; /* Establece un fondo rojo claro */
+    color: #fff;         /* Establece el color del texto en blanco */
+}
+
+.estilo {
+    color: rgb(255, 145, 0); /* Establece el color del texto en naranja */
+    text-decoration: none;   /* Elimina la decoración de texto (subrayado) */
+    background-color: #f0f0f0; /* Establece un fondo gris claro */
+    padding: 10px;       /* Añade relleno alrededor del texto */
+    border-radius: 5px;  /* Redondea las esquinas */
+    font-family: verdana; /* Establece la fuente del texto en Verdana */
+}

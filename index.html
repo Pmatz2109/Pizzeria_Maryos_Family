@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title> "Mario´s Family"</title>
+  <link rel="stylesheet" href="selection.css"> <!-- Link para el diseño del menu-->
+  <link rel="stylesheet" href="button.css"> <!-- Link para el diseño de boton-->
+  <style>
+    /* Estilos CSS internos para elementos específicos de esta página */
+    body {
+      background-image: url("Images/fondrefres.jpg");
+      /* Establece una imagen de fondo para el cuerpo de la página. */
+      background-position: center;
+      /* Centra la imagen de fondo. */
+      background: size 12%;
+      /* Intento de establecer el tamaño del fondo (¡Ojo! Sintaxis incorrecta, debería ser 'background-size: 12%;'). */
+    }
+
+    h2 {
+      border: 2px solid #1f1d1d;
+      /* Agrega un borde sólido de 2px de color gris oscuro alrededor de los encabezados h2. */
+      background-color: #1f1d1d;
+      /* Establece el color de fondo de los encabezados h2 en gris oscuro. */
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="content">
+      <div class="menu container"> <img src="Images/mario.png" class="mascota" alt="" /> <a href="Diseñomenu.html"
+          class="logo">"Mario´s Family"</a> <input type="checkbox" id="menu" /> <label for="menu"> <!-- Apartado de despliegue de menu dependiendo del tamaño-->
+            <img src="Images/menu.png" class="menu-icono" alt=""> </label> <!--Imagen para desplegar el menu-->
+        <nav class="navbar">
+          <ul id="specialButton">
+            <li><a href="index.html">  <!-- Link para otra pagina--><i></i><i></i>  <!-- Funcion para poner letra italica--><span style="font-size: 12px;">Inicio</span></a></li>
+            <li><a href="Refrescos.html"> <!-- Link para otra pagina--> <i></i><i></i>  <!-- Funcion para poner letra italica-->
+                <span style="font-size: 12px;">Refrescos</span></a></li>
+            <li><a href="Promociones.html"> <!-- Link para otra pagina--> <i></i>  <!-- Funcion para poner letra italica-->
+                <i></i>
+                <span style="font-size: 12px;">Promociones</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <h2 style="font-family: Colonna MT;font-size: 42px; font-weight: bold; color: #c1b61fe8;">
+    <center>Nuestra Historia</center>
+  </h2>
+  <p style="font-family: Times New Roman;font-size: 40px; color: #cfc7b8;;background-color: rgba(0, 0, 0, 0.596);"> La
+    Pizzería “Mario`s Family” se inauguró el 12 de mayo del 2023, en la zona de Pampahasi, la cual se encuentra en
+    las cercanías de la calle 2 – Samapa, comenzo a ganar fama por su gran servicio, variedad de sabores, calidad de
+    ingredientes y grandes promociones. Al ser éste un nuevo emprendimiento, con el paso del tiempo tendrá un gran
+    potencial para llegar a competir con las grandes cadenas de comida rápida en la ciudad de La Paz.
+  </p>
+  <h2 style="font-family: Colonna MT;font-size: 42px; font-weight: bold; color: #c1b61fe8;">
+    <center>Nuestra Ubicación</center>
+  </h2>
+  <center><iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.56851265574!2d-68.10689382428369!3d-16.497372140658843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915f204e4cb63297%3A0xda2ed4f2ea5a7f22!2sAv.%20Cdad.%20Del%20Ni%C3%B1o%20380%2C%20La%20Paz!5e0!3m2!1ses!2sbo!4v1729292891531!5m2!1ses!2sbo"
+      width="600" height="450" style="border:0;border: 2px solid #1f1d1d;
+      background-color: #1f1d1d; " allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe></center>
+  <h2 style="font-family: Colonna MT;font-size: 42px; font-weight: bold; color: #c1b61fe8;">
+    <center>¡Haz tu pedido!</center>
+  </h2>
+  <center>
+    <p style="font-family: Buxton Sketch;font-size: 35px; font-weight: bolder; color: #e9f0efe8;">Llame al siguiente
+      numero: <img src="Images/telf.png" width=" 45px" height="45px" /></p>
+    <p style="font-family: Buxton Sketch;font-size: 30px; font-weight: bolder; color: #e9f0efe8;"> 69926425 </p>
+    <p style="font-family: Buxton Sketch;font-size: 35px; font-weight: bolder; color: #e9f0efe8;">Escribanos al
+      Whatssap <img src="Images/Chat.png" width=" 45px" height="45px" />
+    </p>
+    <p style="font-family: Buxton Sketch;font-size: 30px; font-weight: bolder; color: #e9f0efe8;">69926425</p>
+    <p style="font-family: Buxton Sketch;font-size: 35px; font-weight: bolder; color: #e9f0efe8;">O realiza tu pedido
+      de manera virtual</p>
+  </center>
+  <center>
+
+    <a id="specialButton2" href="Formpizza.html"> <!-- Bonton que redirrecciona al formulario--> <i></i>  
+      <i></i> <!-- Funcion para poner letra italica-->
+      <span>Pide Ya</span> </a>
+  </center>
+</body>
+
+</html>
+<script>
+  // Sección de JavaScript para efectos interactivos de los botones
+  let btn = document.querySelector('#specialButton');  // Selecciona el primer contenedor de botones.
+  btn.addEventListener('mousemove', e => {             // Agrega un listener de evento 'mousemove' (movimiento del ratón).
+    let rect = e.target.getBoundingClientRect();  // Obtiene las dimensiones y la posición del botón.
+    let x = e.clientX * 3 - rect.left;           // Calcula la posición horizontal del ratón relativa al botón.
+    btn.style.setProperty('--x', x + 'deg')       // Establece una variable CSS "--x" para controlar el estilo del botón (probablemente una rotación).
+  });
+  let btn1 = document.querySelector('#specialButton2'); // Selecciona el segundo botón.
+  btn1.addEventListener('mousemove', e => {
+    let rect = e.target.getBoundingClientRect();
+    let x = e.clientX * 3 - rect.left;
+    btn1.style.setProperty('--x', x + 'deg')
+  });
+</script>

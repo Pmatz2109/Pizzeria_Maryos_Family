@@ -1,0 +1,61 @@
+* {
+    margin: 0;          /* Elimina los márgenes predeterminados de todos los elementos */
+    padding: 0;         /* Elimina el relleno predeterminado de todos los elementos */
+    box-sizing: border-box; /* Incluye el borde y el relleno en el ancho/alto total del elemento */
+    font-family: sans-serif; /* Establece la fuente genérica para el texto */
+}
+
+:root {
+    --x: 45deg;       /* Define una variable CSS llamada --x con el valor de 45 grados. Se usará para la rotación del gradiente. */
+}
+
+a {
+    position: relative; /* Permite posicionar los elementos hijos (<i> y <span>) de forma absoluta dentro del enlace */
+    width: 150px;       /* Establece el ancho del enlace */
+    height: 55px;        /* Establece la altura del enlace */
+    display: inline-block; /* Permite establecer ancho y alto, y al mismo tiempo se comporta como un elemento en línea */
+    border-radius: 5px;  /* Redondea las esquinas del enlace */
+}
+
+a i {
+    position: absolute; /* Posiciona los elementos <i> de forma absoluta dentro del enlace */
+    inset: -2px;       /* Establece top, right, bottom y left a -2px, expandiendo el <i> ligeramente más allá del enlace */
+    display: block;      /* Hace que el elemento <i> ocupe todo el espacio disponible */
+    border-radius: 5px;  /* Redondea las esquinas del elemento <i> */
+}
+
+a i,
+a i:nth-child(2) {
+    background: linear-gradient(var(--x), #c1b61fe8, #090b13, #02040a, #d40000); /* Aplica un gradiente de fondo al elemento <i>. La dirección del gradiente está determinada por la variable --x. */
+}
+
+a i:nth-child(2) {
+    filter: blur(10px); /* Aplica un efecto de desenfoque al segundo elemento <i>, creando un efecto de brillo */
+}
+
+a span {
+    position: absolute; /* Posiciona el elemento <span> de forma absoluta dentro del enlace */
+    top: 0;           /* Lo alinea en la parte superior */
+    left: 0;          /* Lo alinea a la izquierda */
+    width: 100%;       /* Ocupa todo el ancho del enlace */
+    height: 100%;      /* Ocupa toda la altura del enlace */
+    display: flex;      /* Utiliza Flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;    /* Centra el contenido verticalmente */
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    color: #fff;         /* Establece el color del texto en blanco */
+    letter-spacing: 3px;  /* Aumenta el espaciado entre letras */
+    background: rgba(6, 8, 17, 0.815); /* Establece un fondo semi-transparente oscuro */
+    overflow: hidden;    /* Oculta cualquier contenido que se desborde */
+}
+
+a span::before {
+    content: '';       /* Inserta contenido vacío antes del elemento <span> */
+    position: absolute; /* Lo posiciona absolutamente dentro del <span> */
+    top: 0;           /* Lo alinea en la parte superior */
+    left: -50%;       /* Lo posiciona inicialmente fuera del lado izquierdo */
+    width: 100%;       /* Ocupa todo el ancho del <span> */
+    height: 100%;      /* Ocupa toda la altura del <span> */
+    background: rgba(255, 2555, 255, 0.075); /* Establece un fondo semi-transparente blanco */
+    transform: skew(25deg); /* Inclina el elemento 25 grados */
+}
